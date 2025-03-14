@@ -19,11 +19,24 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FeaturesSection from "@/components/sections/Features";
 import FAQs from "@/components/sections/FAQ";
 import Website from "@/components/sections/Landing";
+import Mantra from "@/components/sections/Mantra";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <main>
+    <main className="relative">
       <Hero />
+      <Mantra />
       <FeaturesSection/>
       <Website/>
     

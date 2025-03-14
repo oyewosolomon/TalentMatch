@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, Layout, Users, BookOpen, DollarSign, FileText, LifeBuoy, MessageCircle, Boxes, Workflow, Search, Building2, Building } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Add scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navigation = [
     {
@@ -40,7 +55,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-white shadow-sm z-50">
+    <nav className={`fixed w-full z-50 transition-colors duration-300 ${isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -115,7 +130,7 @@ const Navbar = () => {
             <button className="px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors">
               Sign In
             </button>
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md">
+            <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md">
               Start free
             </button>
             <button className="px-4 py-2 border border-gray-200 rounded-lg text-gray-700 hover:border-blue-600 hover:text-blue-600 transition-colors">
@@ -187,7 +202,7 @@ const Navbar = () => {
             <button className="w-full px-4 py-2 text-gray-700 hover:text-blue-600">
               Sign In
             </button>
-            <button className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 shadow-sm hover:shadow-md">
+            <button className="w-full px-4 py-2 bg-indigo-700 text-white rounded-lg hover:bg-blue-700 shadow-sm hover:shadow-md">
               Start free
             </button>
             <button className="w-full px-4 py-2 border border-gray-200 rounded-lg text-gray-700 hover:border-blue-600 hover:text-blue-600">
