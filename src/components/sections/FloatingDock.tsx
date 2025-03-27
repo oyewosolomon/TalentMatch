@@ -8,7 +8,7 @@ import {
   IconNewSection,
   IconTerminal2,
 } from "@tabler/icons-react";
-import Image from "next/image";
+
 
 export function FloatingDockDemo() {
   const links = [
@@ -37,7 +37,7 @@ export function FloatingDockDemo() {
     {
       title: "Aceternity UI",
       icon: (
-        <Image
+        <img
           src="https://assets.aceternity.com/logo-dark.png"
           width={20}
           height={20}
