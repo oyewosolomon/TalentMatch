@@ -18,7 +18,7 @@ const Footer = () => {
     },
     {
       title: 'Resources',
-      links: ['Documentation', 'Blog', 'Case Studies', 'Help Center', 'API Status']
+      links: ['Documentation', 'Blog', 'Case Studies', 'Help Center']
     },
     {
       title: 'Company',
@@ -26,7 +26,7 @@ const Footer = () => {
     },
     {
       title: 'Legal',
-      links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'GDPR', 'Security']
+      links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Security']
     }
   ];
 
@@ -53,20 +53,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-6">
               Transforming recruitment with AI-powered matching and assessment technology.
             </p>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-5 h-5" />
-                <span>contact@talentmatch.ai</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-5 h-5" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-5 h-5" />
-                <span>123 AI Street, Tech City, TC 12345</span>
-              </div>
-            </div>
+            
           </div>
 
           {/* Footer Links */}
