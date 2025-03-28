@@ -45,9 +45,19 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">T</span>
-              </div>
+            <svg
+                className="w-8 h-8"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z"
+                  fill="#fff"
+                />
+                <circle cx="16" cy="15" r="3" fill="#000" />
+                <circle cx="24" cy="15" r="3" fill="#000" />
+              </svg>
               <span className="ml-3 text-xl font-bold">TalentMatch AI</span>
             </div>
             <p className="text-gray-400 mb-6">
