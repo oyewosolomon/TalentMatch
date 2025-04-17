@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "$299",
+    price: " ₦150,000",
     description: "Perfect for small retail stores",
     features: [
       "Up to 5 smart shelves",
@@ -18,7 +18,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "$599",
+    price: "₦300,000",
     description: "Ideal for growing businesses",
     popular: true,
     features: [
